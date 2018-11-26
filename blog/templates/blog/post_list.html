@@ -1,0 +1,14 @@
+<html>
+<p> hi django how are you </p>
+<p> it works for me...</p>
+<h2> <p> i will update later...</p> </h2>
+<html>
+{% for post in posts %}
+<div>
+<p>Published:{{post.published_date}}</p>
+<h1><a href ="post_details">{{post.title}}</a></h1>
+<p>{{post.text}}</p>
+</div>
+<br>	
+{{post}}
+{% endfor %}
