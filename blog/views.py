@@ -7,9 +7,11 @@ from django.utils import timezone
 def post_list(request):
 	# get all posts from db. we have load into the tempate, we have to use a query
 	# ORM is Querysets.[ used model instead of table ]
-	posts = Post.objects.all() # all posts objects in the db
+	#posts = Post.objects.all() # all posts objects in the db
 	#posts = Post.objects.filter(published__date
-	return render(request,'blog\post_list.html',{'posts':posts})
+	#return render(request,'blog\post_list.html',{'posts':posts})
+	return render(request, 'blog\post_list.html',{})
+
 
 def post_details(request,pk):
 	post = get_object_or_404(Post,pk=pk)
